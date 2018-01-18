@@ -1,0 +1,136 @@
+//
+//  Constants.h
+//  CopsnRobbersTest
+//
+//  Created by John Markle on 8/5/12.
+//  Copyright (c) 2012 Silver Moonfire LLC. All rights reserved.
+//
+
+#ifndef CopsnRobbersTest_Constants_h
+#define CopsnRobbersTest_Constants_h
+
+enum DIRECTION {
+    DIR_LEFT,
+    DIR_RIGHT,
+    DIR_UP,
+    DIR_DOWN
+    };
+
+enum TILE_TYPE {
+    TILE_NO_ACCESS,     //0
+    TILE_ROAD,          //1
+    TILE_MONEY,         //2
+    TILE_BONUS,         //3
+    TILE_SEXBOT,        //4
+    TILE_DONUT,         //5
+    TILE_SMOKE_BOMB,    //6
+    TILE_LAWYER,        //7
+    TILE_ROBBER_START,  //8
+    TILE_COP_START,     //9
+    TILE_RIVAL_START    //10
+};
+
+enum GAME_STATE {
+    GAME_STATE_LOADING,
+    GAME_STATE_RUNNING,
+    GAME_STATE_PAUSED,
+    GAME_STATE_ENDING,
+    GAME_STATE_INSTRUCTIONS
+};
+
+enum LEVEL_STATE {
+    LEVEL_STATE_LOADING,
+    LEVEL_STATE_RUNNING,
+    LEVEL_STATE_PAUSED,
+    LEVEL_STATE_ENDING
+};
+
+enum CHARACTER_TAGS {
+    CHARACTER_ROBBER = 5000,
+    CHARACTER_ROOKIE = 5001,
+    CHARACTER_FAT_COP = 5002,
+    CHARACTER_CORRUPT_COP = 5003,
+    CHARACTER_INSPECTOR = 5004,
+    CHARACTER_RIVAL = 5005,
+    CHARACTER_SEXBOT = 5006
+};
+
+enum ROBBER_STATE {
+    ROBBER_LOADING,
+    ROBBER_ALIVE,
+    ROBBER_INVLUN,
+    ROBBER_DYING,
+    ROBBER_DEAD,
+    ROBBER_PAUSED
+};
+
+enum RIVAL_STATE {
+    RIVAL_LOADING,
+    RIVAL_ALIVE,
+    RIVAL_PAUSED,
+    RIVAL_RETREAT
+};
+
+enum SEXBOT_STATE {
+    SEXBOT_LOADING,
+    SEXBOT_ALIVE,
+    SEXBOT_DYING,
+    SEXBOT_DEAD
+};
+
+enum COP_STATE {
+    COP_LOADING,
+    COP_ALIVE,
+    COP_ATTACKING,  //caught robber
+    COP_ATTRACTED_DOUGHNUT,  //notices doughnut
+    COP_ATTRACTED_SEXBOT,   //notices sexbot
+    COP_BLINDED,    //afflicted by smokebomb
+    COP_CHASING,    //sees robber
+    COP_CONFUSED,   //saw robber, doesn't anymore
+    COP_SCARED,     //notices lawyer
+    COP_SICK,       //affect by doughnuts
+    COP_DYING,
+    COP_DEAD,
+    COP_ATTRACTED_BONUS,
+    COP_BLINDED_RIVAL
+};
+
+enum ITEM_TAGS {
+    ITEM_TAG_SMOKEBOMB = 1600,
+    ITEM_TAG_SEXBOT = 1601,
+    ITEM_TAG_DOUGHNUT = 1602,
+    ITEM_TAG_LAWYER = 1603,
+    ITEM_TAG_SMOKEBOMB_ICON = 1604,
+    ITEM_TAG_SEXBOT_ICON = 1605,
+    ITEM_TAG_DOUGHNUT_ICON = 1606,
+    ITEM_TAG_LAWYER_ICON = 1607,
+    ITEM_TAG_SMOKEBOMB_CLOUD = 1608,
+    ITEM_TAG_BONUS = 1609,
+    ITEM_TAG_RIVAL_SMOKE = 1610
+};
+
+enum MINIMAP_TAGS {
+    MINIMAP_TAG_ROBBER = 4000,
+    MINIMAP_TAG_RIVAL = 4001,
+    MINIMAP_TAG_ROOKIE = 4002,
+    MINIMAP_TAG_FATCOP = 4003,
+    MINIMAP_TAG_CORRUPTCOP = 4004,
+    MINIMAP_TAG_INSPECTOR = 4005,
+    MINIMAP_TAG_SMOKEBOMB = 4006,
+    MINIMAP_TAG_DOUGHNUT = 4007,
+    MINIMAP_TAG_LAWYER = 4008,
+    MINIMAP_TAG_SEXBOT = 4009,
+    MINIMAP_TAG_BONUS = 4010
+};
+
+enum Z_ORDER {
+    Z_MAP,
+    Z_MONEY,
+    Z_EFFECTS,
+    Z_CHARACTERS,
+    Z_LIGHTING,
+    Z_UI,
+    Z_TEXT
+};
+
+#endif
